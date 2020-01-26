@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Usager{% endblock %}
+
+{% block body %}
+    <h1>Créer un compte</h1>
+
+    {{ include('usager/_form.html.twig') }}
+    {#}{ form(form) }#}
+
+    <a href="{{ path('index') }}">retour à la boutique</a>
+{% endblock %}

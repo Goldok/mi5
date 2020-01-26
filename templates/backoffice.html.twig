@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+{% block title %}BackOffice{% endblock %}
+
+{%  block body %}
+    <div class="center">
+        <h1> Back Office</h1>
+    </div>
+
+    <div class="row">
+            <div class="col-lg-sm-4 categories">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Catégories</h5>
+                        <p class="card-text">
+                        </p>
+                        <a href="{{path('categorie_index')}}" class="btn btn-primary">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+
+        <div class="col-lg-sm-4 categories">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Produits</h5>
+                    <p class="card-text">
+                    </p>
+                    <a href="{{path('produit_index')}}" class="btn btn-primary">Voir plus</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+{%  endblock %}

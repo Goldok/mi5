@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+{% block title %}Rayon {{ categorie.getLibelle() }} : {{produits | length}} produit(s) {% endblock %}
+
+{%  block body %}
+
+  <div class="center">
+    <h1> Rayon "{{ categorie.getLibelle() }}" / {{produits | length}} produit(s) </h1>
+  </div>
+
+
+  <div class="row">
+
+{% for produit in produits %}
+<div class="col-lg-sm-4 categories">
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{ asset(produit.visuel) }}" alt="{{produit.libelle}}">
+  <div class="card-body">
+    <h5 class="card-title">{{produit.libelle}}</h5>
+    <p class="card-text">{{produit.texte}} </p>
+    <p class="card-text">{{produit.prix | currency_convert | format_currency(app.session.get('current_currency'), {rounding_mode: 'floor'})}} </p>
+
+    <form class="form-inline my-2 my-lg-0" action="{{ path('panier_ajouter',{'idProduit':produit.id, 'quantite':1}) }}" method="GET">
+      <button class="btn btn-primary" type="submit">
+        Ajouter
+      </button>
+    </form>
+
+
+  </div>
+</div>
+</div>
+{% endfor %}
+
+</div>
+
+{%  endblock %}

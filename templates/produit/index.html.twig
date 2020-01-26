@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BackOffice-Produit{% endblock %}
+
+{% block body %}
+    <h1>Les Produits</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Libelle</th>
+                <th>Texte</th>
+                <th>Visuel</th>
+                <th>Prix</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for produit in produits %}
+            <tr>
+                <td>{{ produit.id }}</td>
+                <td>{{ produit.libelle }}</td>
+                <td>{{ produit.texte }}</td>
+                <td>{{ produit.visuel }}</td>
+                <td>{{ produit.prix }}</td>
+                <td>
+                    <a href="{{ path('produit_show', {'id': produit.id}) }}">Détails</a>
+                    <a href="{{ path('produit_edit', {'id': produit.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <form class="form-inline my-2 my-lg-0" action="{{ path('produit_new') }}" method="GET">
+        <button class="btn btn-primary" type="submit">
+            Nouveau Produit
+        </button>
+    </form>
+    <br>    <a href="{{ path('backoffice') }}">retour</a>
+
+{% endblock %}

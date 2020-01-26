@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+{% block title %}Boutique{% endblock %}
+
+{%  block body %}
+<div class="center">
+<h1> {% trans %} default.boutique.boutique {% endtrans %} / {{categories | length}} {% trans %} default.boutique.rayons {% endtrans %}</h1>
+</div>
+
+<div class="row">
+    
+
+
+{% for categorie in categories %}
+<div class="col-lg-sm-4 categories">
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{ asset(categorie.visuel) }}" alt="{{categorie.libelle}}">
+  <div class="card-body">
+    <h5 class="card-title">{{categorie.libelle}}</h5>
+    <p class="card-text">{{categorie.texte}}
+    </p>
+    <a href="{{path('rayon',{'idCategorie' : categorie.id}) }}" class="btn btn-primary">Voir plus</a>
+  </div>
+</div>
+</div>
+{% endfor %}
+
+</div>
+
+{%  endblock %}

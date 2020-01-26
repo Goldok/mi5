@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BackOffice-Produit-new{% endblock %}
+
+{% block body %}
+    <h1>Créer un nouveau Produit</h1>
+
+    {{ include('produit/_form.html.twig') }}
+
+    <a href="{{ path('produit_index') }}">retour</a>
+{% endblock %}

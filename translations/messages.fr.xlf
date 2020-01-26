@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="ddDffLe" resname="default.nav_bar.contact">
+        <source>default.nav_bar.contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="baz5qpM" resname="default.nav_bar.maBoutique">
+        <source>default.nav_bar.maBoutique</source>
+        <target>Ma boutique</target>
+      </trans-unit>
+      <trans-unit id="QDSiRlm" resname="default.nav_bar.boutique">
+        <source>default.nav_bar.boutique</source>
+        <target>Boutique</target>
+      </trans-unit>
+      <trans-unit id="_K1kq_P" resname="default.nav_bar.nbProducts">
+        <source>default.nav_bar.nbProducts</source>
+        <target>Produits(s)</target>
+      </trans-unit>
+      <trans-unit id="WYgaira" resname="default.nav_bar.connexion">
+        <source>default.nav_bar.connexion</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="bPZhKa5" resname="default.nav_bar.login">
+        <source>default.nav_bar.login</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id=".M.Vmkg" resname="default.nav_bar.mon_compte">
+        <source>default.nav_bar.mon_compte</source>
+        <target>Mon Compte</target>
+      </trans-unit>
+      <trans-unit id="wSQoGwX" resname="default.nav_bar.mes_commandes">
+        <source>default.nav_bar.mes_commandes</source>
+        <target>Commandes</target>
+      </trans-unit>
+      <trans-unit id="9v360gU" resname="default.nav_bar.logout">
+        <source>default.nav_bar.logout</source>
+        <target>Deconnexion</target>
+      </trans-unit>
+      <trans-unit id="38OclRj" resname="default.nav_bar.backoffice">
+        <source>default.nav_bar.backoffice</source>
+        <target>BackOffice</target>
+      </trans-unit>
+      <trans-unit id="FGBjkr2" resname="default.nav_bar.chercher_produit">
+        <source>default.nav_bar.chercher_produit</source>
+        <target>Chercher un produit</target>
+      </trans-unit>
+      <trans-unit id=".5VdSIb" resname="default.boutique.boutique">
+        <source>default.boutique.boutique</source>
+        <target>Boutique</target>
+      </trans-unit>
+      <trans-unit id="VLTltYk" resname="default.boutique.rayons">
+        <source>default.boutique.rayons</source>
+        <target>Rayons(s)</target>
+      </trans-unit>
+      <trans-unit id="0SkYtYU" resname="default.nav_bar.langue">
+        <source>default.nav_bar.langue</source>
+        <target>Langue</target>
+      </trans-unit>
+      <trans-unit id="7_6lv1l" resname="default.nav_bar.rechercher">
+        <source>default.nav_bar.rechercher</source>
+        <target>Rechercher</target>
+      </trans-unit>
+      <trans-unit id="yHEkYdU" resname="default.boutique.recherche">
+        <source>default.boutique.recherche</source>
+        <target>Résultat pour </target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

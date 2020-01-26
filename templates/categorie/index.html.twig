@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BackOffice-Categorie{% endblock %}
+
+{% block body %}
+    <h1>Les Categories</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Libelle</th>
+                <th>Visuel</th>
+                <th>Texte</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for categorie in categories %}
+            <tr>
+                <td>{{ categorie.id }}</td>
+                <td>{{ categorie.libelle }}</td>
+                <td>{{ categorie.visuel }}</td>
+                <td>{{ categorie.texte }}</td>
+                <td>
+                    <a href="{{ path('categorie_show', {'id': categorie.id}) }}">Détails</a>
+                    <a href="{{ path('categorie_edit', {'id': categorie.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">Aucunes catégories...</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <form class="form-inline my-2 my-lg-0" action="{{ path('categorie_new') }}" method="GET">
+        <button class="btn btn-primary" type="submit">
+            Nouvelle Catégorie
+        </button>
+    </form>
+    <br>    <a href="{{ path('backoffice') }}">retour</a>
+
+{% endblock %}

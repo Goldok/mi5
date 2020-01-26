@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+{% block title %}Mon Compte {% endblock %}
+
+{%  block body %}
+    <div class="center">
+        <div class="row">
+            <h1 class="col-12 text-center">Mon Compte</h1>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        N° Client : {{ user.getId() }}
+                        <br>
+                        Nom :  {{ user.getNom() }}
+                        <br>
+                        Prénom :  {{ user.getPrenom() }}
+                        <br>
+                        Email :  {{ user.getEmail() }}
+                        <br>
+                        Activités  <a href="{{path('commande_index')}}" class="btn btn-primary">{{nbCommandes}} commandes</a>
+
+                    </div>
+                </div>
+            </div>
+
+    </div>
+{%  endblock %}
+
